@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Cams Notifications",
+    "description": "Add the reading time to Chrome Extension documentation articles",
+    "version": "1.0",
+    "action":{
+        "default_popup":"src/onboard.html"
+    }
+
+}
