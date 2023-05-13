@@ -8,8 +8,7 @@
     },
 
     "background": {
-        "service_worker": "assets/background-8b35816e.js",
-        "type": "module"
+        "service_worker": "assets/background.js"
       },
    
       "permissions": ["gcm", "storage", "notifications"]

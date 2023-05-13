@@ -1,10 +1,10 @@
 import React from 'react'
 import {AiOutlineClose} from "react-icons/ai"
 import {RxDashboard} from "react-icons/rx"
-import {MdOutlineExplore,MdHistory} from "react-icons/md"
+import {MdOutlineExplore,MdHistory,MdOutlineManageAccounts} from "react-icons/md"
 
 
-export default function SideNav({setMenuTrigger}) {
+export default function SideNav({setMenuTrigger,setNav}) {
   return (
     <div className='w-full h-full'>
         <main className='flex items-center space-x-3'>
@@ -14,21 +14,27 @@ export default function SideNav({setMenuTrigger}) {
 
           <main className='flex flex-col py-10 space-y-4'>
             <a href="index.html">
-              <h5 className='flex items-center space-x-2'>
+              <h5 className='flex items-center space-x-2' onClick={setNav("Explore")}>
                  <MdOutlineExplore  className='text-xl'/>
-                 <span>Explore</span> 
+                 <span  onClick={()=>setNav("Explore")}>Explore</span> 
                 </h5>
                 </a>
                 <a href="dashboard.html">
-            <h5 className='flex items-center space-x-2'>
+            <h5 className='flex items-center space-x-2' onClick={setNav("Dashboard")}>
                 <RxDashboard className='text-xl'/>
-                <span>Dashboard</span>
+                <span onClick={()=>setNav("Dashboard")}>Dashboard</span>
                 </h5>
             </a>
             <a href="history.html">
-            <h5 className='flex items-center space-x-2'> 
+            <h5 className='flex items-center space-x-2' onClick={setNav("History")}> 
                 <MdHistory  className='text-xl'/>
-               <span>History</span> 
+               <span onClick={()=>setNav("History")}>History</span> 
+                </h5>
+            </a>
+            <a href="history.html">
+            <h5 className='flex items-center space-x-2' onClick={()=>setNav("Account")}> 
+                <MdOutlineManageAccounts  className='text-xl'/>
+               <span onClick={()=>setNav("Account")}>Account settings</span> 
                 </h5>
             </a>
         </main>
